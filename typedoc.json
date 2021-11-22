@@ -1,0 +1,5 @@
+{
+  "extends": "node_modules/@skylib/config/src/typedoc",
+  "name": "Quasar Framework",
+  "out": "docs"
+}

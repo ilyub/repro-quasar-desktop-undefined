@@ -1,0 +1,9 @@
+.quasar
+.scannerwork
+.vscode
+cache
+dist
+docs
+lcov.info
+lcov-report
+node_modules
