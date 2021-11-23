@@ -10,12 +10,12 @@ import LanguagePicker from "@/components/LanguagePicker.vue";
 installQuasarPlugin();
 
 it("LanguagePicker", () => {
+  const callback = jest.fn();
+
   const wrapper = testUtils.mount(LanguagePicker, {
     global: {
       provide: {
-        [injectChangeLanguageAction as symbol]() {
-          //
-        },
+        [injectChangeLanguageAction as symbol]: callback,
         [injectLanguagePickerItems as symbol]: [
           {
             caption: "English (USA)",
