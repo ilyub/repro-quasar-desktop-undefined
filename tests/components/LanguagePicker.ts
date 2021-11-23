@@ -1,3 +1,4 @@
+import { QBtn } from "quasar";
 import { installQuasarPlugin } from "@quasar/quasar-app-extension-testing-unit-jest";
 import * as testUtils from "@vue/test-utils";
 
@@ -9,7 +10,7 @@ import LanguagePicker from "@/components/LanguagePicker.vue";
 
 installQuasarPlugin();
 
-it("LanguagePicker", () => {
+it("LanguagePicker", async () => {
   const callback = jest.fn();
 
   const wrapper = testUtils.mount(LanguagePicker, {
@@ -40,5 +41,5 @@ it("LanguagePicker", () => {
     }
   });
 
-  expect(wrapper).toBeDefined();
+  await wrapper.findComponent(QBtn).trigger("click");
 });
